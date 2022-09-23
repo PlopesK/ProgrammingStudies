@@ -1,0 +1,59 @@
+<html lang="pt-BR">
+	<head>
+		<title>Calculadora</title>
+		<style type="text/css">
+			.card {
+					 border: 4px solid #6982DB;
+				   background-color: #D8E3FA;
+				   border-radius: 10px;
+			     height: 300px;
+				   text-align: center;
+				   font-size: 15px;
+				   }
+			.submit {
+					 border: 2px solid #6982DB;
+				   background-color: #D8E3FA;
+				   border-radius: 10px;
+				   height: 50px;
+				   width: 100px;
+				   text-align: center;
+				   font-size: 20px;
+				   color: #132773;
+			}
+		</style>
+		<meta charset="utf-8">
+	</head>
+	<body>
+	<hr size= "4" color="#2659BD">
+	<font size= "5" face= "Sans Serif" color= "#256AD8">
+		<H1><center> Faça qualquer calculo do 2ºGrau!!</center></H1>
+	</font>
+
+		<form name = "form1" method ="POST" action ="equacao_quadratica.php">
+		<br>
+			<p class="card">
+				<font size= "5" face= "Sans Serif" color= "#132773">
+					<TR>
+						<br><br><br><br>
+						<TH>Exemplo: ax² + bx + c = 0 <br><br> </TH>
+						<TH><input type ="number" name ="A"> x²</TH>
+						&nbsp;+
+						<TH>&nbsp; <input type ="number" name ="B"> x</TH>
+						&nbsp;+
+						<TH>&nbsp;&nbsp; <input type ="n" name ="C"> </TH>
+						<TH> = 0 <br> </TH>
+						<TH> &nbsp;&nbsp;&nbsp; <input type ="number" name ="A_Fracao">
+						<TH> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type ="number" name ="B_Fracao">
+						<TH> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type ="number" name ="C_Fracao">
+						<TH>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </TH>
+					</TR>
+				</font>
+				<br>
+			</p>
+			<br>
+			<center><input class="submit" type ="submit" name="submit" value ="Calcular"></center>
+		</form>
+	<br><br>
+	<hr size= "4" color="#2659BD">
+	</body>
+</html>

@@ -1,0 +1,225 @@
+/* Reset */
+
+*{
+margin:0;
+padding: 0;
+font-size: 100%;
+box-sizing: border-box;
+font-family: "Cambria";
+}
+
+nav, ul {
+list-style: none;	
+}
+
+
+/* ----------------------- Header ----------------------- */
+.header{
+	background-color: #33d9b2;
+	width:100%;
+	height: 120px;
+	top: 0;
+	left:0;
+	display: flex;
+	justify-content: space-between;
+	color: #1EC7E2;
+	padding: 20px;
+}
+
+.heletras {
+	color: #81ECC5;
+	font-size: 23px;
+	background-color: #10ac84;
+	bottom: 0;
+	display: flex;
+	height: 40px;
+	width:100%;
+	top: 140px;
+}
+/* ----------------------- Letras ----------------------- */
+h1 {
+	color: #81ecec;
+	font-size: 50px;
+}
+
+h2 {
+	color: #81ecec;
+	font-size: 25px; 
+}
+
+h3 {
+	color: #81ecec;
+	font-size: 15px; 
+}
+
+t {
+	color: #30336b;
+	font-size: 50px;
+}
+
+l {
+	color: #30336b;
+	font-size: 20px;
+}
+
+/* ----------------------- Informações ----------------------- */
+.componentes {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-image: url('background.jpg');
+}
+
+.componentes2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-image: url('background2.png');
+	background-repeat:repeat-y;
+	
+}
+
+.componentes3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-image: url('background3.png');
+	background-repeat:repeat-y;
+	
+}
+
+.card {
+	border: 4px solid #218c74;
+	background-color: #1dd1a1;
+	width: 1348px;
+	height: 180px;
+	font-size: 25px;
+	color: #222f3e;
+	text-align: center;
+}
+
+.card2 {
+	border: 4px solid #218c74;
+	background-color: #1dd1a1;
+	width: 1348px;
+	height: 180px;
+	font-size: 30px;
+	color: #222f3e;
+	text-align: center;
+}
+
+.card3 {
+	border: 4px solid #218c74;
+	background-color: #1dd1a1;
+	width: 1348px;
+	height: 140px;
+	font-size: 30px;
+	color: #222f3e;
+	text-align: center;
+}
+
+input[type="button"], form input[type="submit"],form input[type="reset"] {
+	border: 4px solid #218c74;
+	background-color: #1dd1a1;
+	font-size: 25px; 
+	color: #222f3e;
+	height: 50px;
+	width: 200px;
+	z-index: 2;
+	cursor: pointer;
+}
+
+input[type="text"], form input[type="number"], form input[type="email"]{
+	border: 4px solid #218c74;
+	background-color: white;
+	font-size: 20px;
+	color: #222f3e;
+	height: 50px;
+	width: 400px;
+}
+
+.formulario {
+	border: 4px solid #218c74;
+	background-color: #1dd1a1;
+	width: 800px;
+	height: 440px;
+	font-size: 22px;
+	color: #222f3e;
+	text-align: center;
+}
+
+.formulariocat {
+	border: 4px solid #218c74;
+	background-color: #1dd1a1;
+	width: 800px;
+	height: 320px;
+	font-size: 22px;
+	color: #222f3e;
+	text-align: center;
+}
+
+.formularioemp {
+	border: 4px solid #218c74;
+	background-color: #1dd1a1;
+	width: 800px;
+	height: 465px;
+	font-size: 22px;
+	color: #222f3e;
+	text-align: center;
+}
+
+.formulariolivro {
+	border: 4px solid #218c74;
+	background-color: #1dd1a1;
+	width: 800px;
+	height: 620px;
+	font-size: 22px;
+	color: #222f3e;
+	text-align: center;
+}
+
+.formulariolivro textarea {
+	border: 4px solid #218c74;
+	background-color: white;
+	font-size: 20px;
+	color: #222f3e;
+	width: 400px;
+}
+
+.formularioesta {
+	border: 4px solid #218c74;
+	background-color: #1dd1a1;
+	width: 1120px;
+	height: 640px;
+	font-size: 22px;
+	color: #222f3e;
+	text-align: center;
+}
+
+.alinhamento {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.lista table, th, td {
+	border:1px solid #30336b;
+	color: #30336b;
+	width: 800px;
+	background-color: white;
+    align-items: center;
+    padding: 10px;
+}
+
+.lista button {
+	border: 2px solid #30336b;
+	width: 60px;
+	color: #30336b;
+	cursor: pointer;
+}

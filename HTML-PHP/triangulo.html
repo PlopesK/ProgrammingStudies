@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Triangulo</title>
+        <style type="text/css">
+          .form-input {
+            background-color: Tomato;
+            font-size: 1.7rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            width: 30%;
+            height: 50%;
+            margin-left: 35%;
+            padding-top: 20px;
+            border-radius: 20px;
+          }
+          input {
+            margin-top: 50px;
+            border-radius: 6px;
+          }
+          .myButton {
+            margin-left:40%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: aqua;
+            font-weight: bold;
+          }
+        </style>
+        <meta charset="utf-8">
+    </head>
+    <body>
+      <div class="form-input">
+          <form name = "form1" method ="POST" action ="triangulo.php">
+              Lado A: <input type ="text" name ="A"> <br>
+              Lado B: <input type ="text" name ="B"> <br>
+              Lado C: <input type ="text" name ="C"> <br>
+          <input class="myButton" type ="submit" name="submit" value ="Calcular">
+        </form>
+      </div>
+    </body>
+</html>

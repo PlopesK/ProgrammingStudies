@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* font-family: 'Lobster', cursive; */
+
+/* Reset */
+
+*{
+margin:0;
+padding: 0;
+font-size: 100%;
+box-sizing: border-box;
+font-family: 'Lobster', cursive, 'Helvetica', sans-serif;
+}
+
+nav, ul {
+list-style: none;	
+}
+
+
+/* ----------------------- Header ----------------------- */
+.header{
+	background-color: #70E3F5;
+	width:100%;
+	top: 0;
+	left:0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+/* ----------------------- Letras ----------------------- */
+h1 {
+	color: #1EC7E2;
+	font-size: 60px;
+}
+
+h2 {
+	color: #2DABBF;
+	font-size: 30px; 
+}
+
+/* ----------------------- Informações ----------------------- */
+.componentes {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 800px;
+	width: 100%;
+	background-image: url('https://mcdn.wallpapersafari.com/medium/15/89/FkiTP4.jpeg');
+
+}
+
+.componentes img {
+	width: 150px;
+	position: relative;
+	right: 180px;
+	top: 140px;
+}
+
+.card {
+	border-radius: 10px;
+	height: 200px;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}
+
+.imagem img {
+	width: 150px;
+	position: relative;
+	left: 560px;
+	top: -200px;
+}
+
+input[type="button"]{
+	border: 4px solid #1EC7E2;
+	background-color: #31A2E3;
+	font-size: 30px; 
+	color: white;
+	height: 50px;
+	width: 200px;
+	z-index: 2;
+	cursor: pointer;
+}
+
+/*----------------------- Registrar.php -----------------------*/
+.componentes2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 2000px;
+	width: 100%;
+	background-image: url('https://mcdn.wallpapersafari.com/medium/15/89/FkiTP4.jpeg');
+
+}
+
+.card2 {
+	border: 4px solid white;
+	height: 1800px;
+	width: 1000px;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+
+input[type="text"]{
+	border: 4px solid #1EC7E2;
+	background-color: white;
+	font-family: 'Arial';
+	font-size: 20px; 
+	color: black;
+	height: 50px;
+	width: 400px;
+}
+
+input[type="submit"],form input[type="reset"] {
+	border: 4px solid #1EC7E2;
+	background-color: #31A2E3;
+	font-size: 30px; 
+	color: white;
+	height: 50px;
+	width: 200px;
+	z-index: 2;
+	cursor: pointer;
+}
+
+/* ----------------------- Excluir.php ----------------------- */
+
+.componentes input[type="text"]{
+	border: 4px solid #1EC7E2;
+	background-color: white;
+	font-family: 'Arial';
+	font-size: 20px; 
+	color: black;
+	height: 50px;
+	width: 600px;
+}
+
+.deletar input[type="submit"]{
+	border: 4px solid #1EC7E2;
+	background-color: #31A2E3;
+	font-size: 30px; 
+	color: white;
+	height: 50px;
+	width: 200px;
+	z-index: 2;
+	cursor: pointer;
+	top: 100px;
+}

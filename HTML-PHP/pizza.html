@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Pizzaria</title>
+	</head>
+	<body>
+	<font size= "20" face= "Sans Serif" color= "#762E0C">
+	<br>
+		<H1><center> Bem-vindo(a) a nossa Pizzaria!</center></H1>
+	</font>
+	
+		<form name = "form1" method ="POST" action ="pizza.php">
+		<br>
+			<center><table border= "2" bordercolor= "#CA6231" bgcolor= "#E6CF86" width= "100" height= "50">
+				<font size= "20" face= "Sans Serif" color= "#0111FF">
+					<TR>
+						<TH> Digite quantas pizzas você quer: <input type ="number" name ="pizza"> <br> </TH>
+						<TH> Digite quantas sobremesas você quer: <input type ="number" name ="sobremesa"> <br> </TH>
+						<TH> Digite quantas bebidas você quer: <input type ="n" name ="bebida"> <br> </TH>
+					</TR>
+				</font>
+			</table>
+			
+			<center><H1> Qual será o meio do pagamento? </H1></center>
+			<center><select name="opcoes">
+				<option type="radio" id="debito" name="debito" value="debito">
+				<label for="debito">Cartão de Débito</label><br>
+						
+				<option type="radio" id="credito" name="credito" value="credito">
+				<label for="credito">Cartão de Crédito</label><br>
+						
+				<option type="radio" id="nota" name="nota" value="nota">
+				<label for="nota">Dinheiro Físico</label><br>
+			</select></center>
+			<br>
+			<input type ="submit" name="submit" value ="Calcular">
+		</form>
+	</body>
+</html>
