@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title> Formulário </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	<center><H1> Cadastro de Estagiário </H1></center>
+	<form action= "#" method= "Post">
+		<fieldset>
+			<legend>Identificação do Usuário</legend>
+			Nome:	<input 
+					type= "Text" 
+					size= "40" 
+					maxlength= "40"
+					placeholder="Digite seu nome"> 
+					<p>
+			Email: 	<input 
+					type= "email" 
+					size= "50" 
+					maxlength= "50"
+					placeholder="Digite seu email"> 
+					<p>
+			Senha: 	<input 
+					type= "password" 
+					size= "15" 
+					maxlength= "15"
+					placeholder="Digite sua senha"> 
+					<p>
+			Sexo:	<input type= "Radio" name= "a" value= "M"> Masculino 
+					<input type= "Radio" name= "a" value= "F">Feminino 
+					<p>
+			Data de Nascimento: <input type="date">
+			<p>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Endereço do Usuário</legend>
+			Logradouro: <input
+						type="text"
+						size="50"
+						maxlength="50"
+						placeholder="Digite a Rua, Avenida, Vila">
+						<p>
+			N°:	<input
+				type="number"
+				size="6"
+				maxlength="6"
+				placeholder="Digite o N°">
+				<p>
+			Complemento:	<input
+							type="text"
+							size="20"
+							maxlength="20"
+							placeholder="Digite o complemento">
+							<p>
+			Cidade:	<input
+					type="text"
+					size="30"
+					maxlength="30"
+					placeholder="Digite a cidade em que você mora">
+					<p>
+			Estado:	<select>
+						<optgroup label="Região Sudeste">
+							<option value="SP">SP - São Paulo</option>
+							<option value="RJ">RJ - Rio de Janeiro</option>
+							<option value="MG">MG - Minas Gerais</option>
+							<option value="ES">ES - Espírito Santo</option>
+						</optgroup>
+						<optgroup label="Região Sul">
+							<option value="PR">PR - Paraná</option>
+							<option value="SC">SC - Santa Catarina</option>
+							<option value="RS">RS - Rio Grande do Sul</option>
+						</optgroup>
+						<optgroup label="Região Norte">
+							<option value="AM">AM - Amazonas</option>
+							<option value="RR">RR - Roraima</option>
+							<option value="AP">AP - Amapá</option>
+							<option value="PA">PA - Pará</option>
+							<option value="TO">TO - Tocantins</option>
+							<option value="RO">RO - Rondônia</option>
+							<option value="AC">AC - Acre</option>
+						</optgroup>
+						<optgroup label="Região Nordeste">
+							<option value="AL">AL - Alagoas</option>
+							<option value="BA">BA - Bahia</option>
+							<option value="CE">CE - Ceará</option>
+							<option value="MA">MA - Maranhão</option>
+							<option value="PB">PB - Paraíba</option>
+							<option value="PE">PE - Pernambuco</option>
+							<option value="PI">PI - Piauí</option>
+							<option value="RN">RN - Rio Grande do Norte</option>
+							<option value="SE">SE - Sergipe</option>
+						</optgroup>
+						<optgroup label="Região Centro-Oeste">
+							<option value="MT">MT - Mato Grosso</option>
+							<option value="MS">MS - Mato Grosso do Sul</option>
+							<option value="GO">GO - Goiás</option>
+							<option value="DF">DF - Distrito Federal</option>
+						</optgroup>
+					</select>
+					<p>
+		</fieldset><p>
+		
+		<fieldset>
+				<legend>Dados do Usuário</legend>
+				Período Disponível:
+				<input type="checkbox">Período da Manhã
+				<input type="checkbox">Período da Tarde
+				<input type="checkbox">Período da Noite
+				<p>
+				Formação: 	<input type= "Checkbox"> Ensino Médio
+							<input type= "Checkbox"> Técnico
+							<input type= "Checkbox"> Graduado 
+							<p>
+				Cargo: 	<select>
+						<option> Digitador </option>
+						<option> Programador </option>
+						<option> Analista </option>
+						</select> 
+						<p>
+				Observação: <br>
+							<textarea rows="10" cols="70"> Digite Aqui 
+							</textarea><p>
+		</fieldset>
+		<p>
+		<hr size= "2" color="Red"><center>
+		<input type= "Submit" value= "Novo">
+		<input type= "Submit" value= "Atualizar">
+		<input type= "Submit" value= "Excluir">
+		<input type= "Reset" value= "Limpar">
+		<hr size="2" color="Red"></center>
+	</form>
+	</body>
+</html>
