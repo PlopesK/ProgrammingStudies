@@ -1,0 +1,156 @@
+/*Begin*/
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: black;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/*Header*/
+.top {
+  background-color: #374A9E;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  height: 55px;
+  left: 0;
+}
+
+.title {
+  text-decoration: wavy;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+.menu {
+  position: relative;
+  width: 100%;
+  left: 0;
+  height: min-content;
+  text-align: center;
+  background-color: #151D3D;
+}
+
+.links a {
+  font-size: 2em;
+  color: white;
+  top: 0;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: #C9DFF6;
+  animation-name: link;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/*Main*/
+.ml2 {
+  font-weight: 900;
+  font-size: 4em;
+  text-align: center;
+  padding-top: 8%;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+p {
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    text-align: center;
+    animation-name: slidein;
+}
+
+section{
+  min-height: 100vh;
+  text-align: center;
+}
+
+section .text {
+  margin: 100px;
+}
+
+section .text h1 {
+  font-size: 3rem;
+  margin: 20px;
+}
+
+section .text h2 {
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 2.5s ease-in;
+}
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    75% {
+      font-size: 300%;
+      margin-left: 25%;
+      width: 150%;
+    }
+  
+    to {
+      margin-left: 0.5%;
+      width: 100%;
+      font-size: 200%;
+
+    }
+  }
+
+  @keyframes link {
+    from {
+      font-size: 2em;
+    }
+
+    50% {
+      font-size: 2.5em;
+    }
+
+    to {
+      font-size: 2em;
+    }
+  }
