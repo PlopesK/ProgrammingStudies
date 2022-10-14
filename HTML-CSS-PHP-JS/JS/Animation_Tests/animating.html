@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title> Animations :D</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <header>
+            <div class="top">
+                <div class="title">
+                    Primo do Primo
+            </div>
+            <div class="menu">
+                <span class="links">
+                    <figure>
+                        <a href="" id="#sobre">Sobre</a>
+                    </figure>
+                    <figure>
+                        <a href="" id="#anim">Animações</a>
+                    </figure>
+                </span>
+            </div>
+        </header>
+
+        <h1 class="ml2">Hello World</h1>
+        <p>
+            Peek-a-Boo!
+        </p>
+
+        <br><br>
+        <section>
+            <div class="text container reveal fade-bottom">
+                <h1>Here something really cool!!</h1><br>
+            </div>
+            <div class="text container reveal fade-bottom">
+                <h2>Wait for it</h2><br>
+            </div>
+            <div class="text container reveal fade-bottom">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper sed nisi sed tempor. Etiam sollicitudin dapibus metus ac venenatis. Aenean risus augue, placerat dignissim diam ut, imperdiet efficitur lacus. Sed sodales nibh eu elit faucibus auctor. Ut ornare ornare orci nec dapibus. Nullam accumsan vehicula orci interdum accumsan. Donec eget vulputate risus.
+
+                Nullam posuere eros non congue venenatis. Suspendisse eu nibh quis velit luctus cursus. Sed eu orci consectetur, porta ipsum sed, eleifend lacus. Aliquam imperdiet nisi sit amet metus tincidunt, nec ullamcorper mauris consectetur. Vestibulum tristique sollicitudin enim euismod dapibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pellentesque elementum dolor, in hendrerit nisi interdum eget. Mauris interdum placerat viverra. Morbi in quam gravida, interdum ligula a, auctor ipsum. Duis vitae neque sodales, gravida dui vel, laoreet mi.
+                
+                Praesent in tortor mauris. Phasellus at lorem sed ipsum eleifend gravida. Pellentesque blandit ante dui, ac ullamcorper erat vestibulum non. Aenean pellentesque erat vel cursus convallis. Nunc vehicula semper mi, vitae blandit orci mollis at. Nulla odio tortor, venenatis sed diam eget, varius accumsan nisi. Aliquam aliquam a erat quis viverra. Maecenas eu ornare orci. Integer nec metus ac sapien porttitor convallis in pulvinar magna. 
+            </div>
+        </section>
+
+        <script src="anim.js"></script>
+        <script>
+            var menu = document.querySelectorAll('.title');
+            menu[0].addEventListener('click',()=> {
+                alert('clicked :D');
+            })
+        </script>
+
+    <script type = "text/javascript">
+        var body=document.getElementsByTagName("body")[0];
+        var parent=document.getElementById("before");
+        var child=document.getElementById("after");
+
+        body.onscroll = function(){
+        if(document.documentElement.scrollTop>=child.offsetTop)
+        {
+            child.style.display="block"
+        }
+
+        };
+    </script>
+
+    </body>
+</html>
