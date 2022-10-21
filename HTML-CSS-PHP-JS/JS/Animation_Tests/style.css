@@ -168,6 +168,7 @@ section .text h2 {
     text-align: center;
     display: flex;
     margin-top: 100px;
+    font-family: "Poppins", sans-serif;
   }
 
   .content {
