@@ -1,3 +1,16 @@
+/* Scroll */
+var body=document.getElementsByTagName("body")[0];
+var parent=document.getElementById("before");
+var child=document.getElementById("after");
+
+body.onscroll = function(){
+if(document.documentElement.scrollTop>=child.offsetTop)
+{
+    child.style.display="block"
+}
+
+};
+
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   
@@ -15,3 +28,10 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+
+  /* Click */
+  var menu = document.querySelectorAll('.title');
+  menu[0].addEventListener('click',()=> {
+    alert('clicked :D');
+  })
+  

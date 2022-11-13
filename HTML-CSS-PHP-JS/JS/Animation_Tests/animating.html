@@ -2,6 +2,7 @@
     <head>
         <title> Animations :D</title>
         <link rel="stylesheet" href="style.css">
+        <script src="anim.js"></script>
         
         <meta charset="utf-8">
     </head>
@@ -23,6 +24,24 @@
                 </span>
             </div>
         </header>
+
+        <div class="window">
+            <div class="box">
+                <div class="cat">
+                    <div class="ear ear--left"></div>
+                    <div class="ear ear--right"></div>
+                    <div class="face">
+                    <div class="eye eye--left">
+                        <div class="eye-pupil"></div>
+                    </div>
+                    <div class="eye eye--right">
+                        <div class="eye-pupil"></div>
+                    </div>
+                    <div class="muzzle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <h1 class="ml2">Hello World</h1>
         <p>
@@ -52,28 +71,5 @@
                 Praesent in tortor mauris. Phasellus at lorem sed ipsum eleifend gravida. Pellentesque blandit ante dui, ac ullamcorper erat vestibulum non. Aenean pellentesque erat vel cursus convallis. Nunc vehicula semper mi, vitae blandit orci mollis at. Nulla odio tortor, venenatis sed diam eget, varius accumsan nisi. Aliquam aliquam a erat quis viverra. Maecenas eu ornare orci. Integer nec metus ac sapien porttitor convallis in pulvinar magna. 
             </div>
         </section>
-
-        <script src="anim.js"></script>
-        <script>
-            var menu = document.querySelectorAll('.title');
-            menu[0].addEventListener('click',()=> {
-                alert('clicked :D');
-            })
-        </script>
-
-    <script type = "text/javascript">
-        var body=document.getElementsByTagName("body")[0];
-        var parent=document.getElementById("before");
-        var child=document.getElementById("after");
-
-        body.onscroll = function(){
-        if(document.documentElement.scrollTop>=child.offsetTop)
-        {
-            child.style.display="block"
-        }
-
-        };
-    </script>
-
     </body>
 </html>
