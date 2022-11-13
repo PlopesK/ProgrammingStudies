@@ -235,6 +235,7 @@ section .text h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 .cat {
@@ -301,6 +302,7 @@ section .text h2 {
   width: 100%;
   background: var(--color-black);
   border-radius: 50%;
+  display: flex;
 }
 
 .eye {
@@ -310,6 +312,8 @@ section .text h2 {
   width: 31%;
   background: var(--color-white);
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  display: flex;
+  justify-content: center;
 }
 
 .eye::after {
@@ -333,29 +337,12 @@ section .text h2 {
   100% { height: 0; }
 }
 
-.eye::before {
-  content: '';
-  position: absolute;
-  top: 60%;
-  height: 10%;
-  width: 15%;
-  background: var(--color-white);
-  border-radius: 50%;
-}
-
-.eye--left {
-  left: 0;
-}
-
 .eye--left::before {
-  right: -5%;
+  left: -5%;
 }
 
-.eye--right {
-  right: 0;
-}
 .eye--right::before {
-  left: -5%;
+  right: -5%;
 }
 
 .eye-pupil {
@@ -379,11 +366,11 @@ section .text h2 {
 }
 
 .eye--left{
-    right: 30%;
+    left: 5%;
 }
   
 .eye--right{
-    left: 30%;
+    right: 5%;
 }
   
 .eye-pupil::after {
