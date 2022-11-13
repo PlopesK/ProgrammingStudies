@@ -367,10 +367,10 @@ section .text h2 {
 
 @keyframes look-around {
   0% { transform: translate(0) }
-  5% { transform: translate(50%, -25%) }
-  10% { transform: translate(50%, -25%) }
-  15% { transform: translate(-100%, -25%) }
-  20% { transform: translate(-100%, -25%) }
+  5% { transform: translate(50%, 25%) }
+  10% { transform: translate(50%, 25%) }
+  15% { transform: translate(-100%, 25%) }
+  20% { transform: translate(-100%, 25%) }
   25% { transform: translate(0, 0) }
   100% { transform: translate(0, 0) }
 }
