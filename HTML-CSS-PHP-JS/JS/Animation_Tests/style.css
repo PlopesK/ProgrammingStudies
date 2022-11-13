@@ -20,6 +20,7 @@ body {
   color: black;
   line-height: 1.6;
   min-height: 100vh;
+  font-family: Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 /*Header*/
@@ -30,6 +31,7 @@ body {
   width: 100%;
   height: 55px;
   left: 0;
+  z-index: 1600;
 }
 
 .title {
@@ -297,8 +299,7 @@ section .text h2 {
   transform: rotate(15deg);
 }
 
-.ear--right::before,
-.ear--right::after {
+.ear--right::before, .ear--right::after {
   left: 10%;
 }
 
