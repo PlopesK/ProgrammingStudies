@@ -4,7 +4,7 @@ myName = input()
 if (myName == "Plopes"):
     print ('How unfortunate...')
 else: print ('Nice to meet you, ' + myName)
-print ('The lengh of yourr name is: ')
+print ('The lengh of your name is: ')
 print (len(myName))
 print ('What is your age')
 age = input()
