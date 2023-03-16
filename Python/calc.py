@@ -1,6 +1,6 @@
 import pandas as pd
 
-table = pd.read_csv("../Python/__pycache__/values.csv", sep=";")
+table = pd.read_csv("../Python/datas/values.csv", sep=";", encoding="latin")
 print(table)
 quantity = table['Quantidade'].sum()
 valuefinal = table['ValorFinal'].sum()
