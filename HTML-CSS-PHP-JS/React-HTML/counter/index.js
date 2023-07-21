@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 class Counter extends React.Component {
@@ -29,5 +29,32 @@ class Counter extends React.Component {
   }
 }
 
+function FormExample() {
+  const [inputValue, setInputValue] = useState('');
+  const [displayedValue, setDisplayedValue] = useState('');
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleDisplayClick = () => {
+    setDisplayedValue(inputValue);
+  };
+
+  return (
+    <div>
+      <input type="text" value={inputValue} onChange={handleInputChange} />
+      <button onClick={handleDisplayClick}>Display</button>
+      <p>Displayed Value: {displayedValue}</p>
+    </div>
+  );
+}
+
 const rootElement = document.getElementById('root');
-ReactDOM.render(<Counter />, rootElement);
+ReactDOM.render(
+  <div>
+    <Counter /> <br></br>
+    <FormExample />
+  </div>,
+  rootElement
+);
