@@ -32,7 +32,7 @@ function App() {
         <h1> Registration for Internship </h1>
         <a className="lamp" id="lamp" onClick={toggleDarkMode}> <p><i class="fa fa-lightbulb "></i></p> </a>
         <hr style={{'margin-bottom': 10 + 'px'}}/>
-        <img src= "Kitten Coffee Logo2.png" alt= "Kitten Coffee Logo" width= "150" height= "150" />
+        <img src= "Kitten Coffee Logo2.png" alt= "Kitten Coffee Logo" id="Kitten" width= "150" height= "150" />
         <form action= "#" method= "Post">
           <fieldset>
             <legend>User Information</legend>
