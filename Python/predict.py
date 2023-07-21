@@ -38,3 +38,5 @@ print(r2_score(y_test, PredictForestRegression)) #More accurate to this case
 newtable = pd.read_csv(r"..\Python\datas\novos_barcos.csv")
 predict = ForestRegression.predict(newtable)
 print(predict)
+https://www.youtube.com/watch?v=8zm4L3rVreI
+progress bar

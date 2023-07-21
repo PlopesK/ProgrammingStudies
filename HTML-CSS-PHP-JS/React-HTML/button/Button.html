@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button</title>
+</head>
+<body>
+  <div id="button"></div>
+
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+  <audio id="Escute" src="thorffin.mp3" preload="auto"></audio>
+
+  <script>
+    function MyButton() {
+      const [isAudioPlaying, setAudioPlaying] = React.useState(false);
+
+      const handleClick = () => {
+        const clickSound = document.getElementById('Escute');
+        if (!isAudioPlaying) {
+          clickSound.play();
+          setAudioPlaying(true);
+        }
+      };
+
+      return React.createElement('button', { onClick: handleClick }, 'Escute com atenção');
+    }
+
+    function MyApp() {
+      return React.createElement('div', null,
+        React.createElement('h1', null, 'Welcome to my app'),
+        React.createElement(MyButton, null)
+      );
+    }
+
+    ReactDOM.render(
+      React.createElement(React.StrictMode, null,
+        React.createElement(MyApp, null)
+      ),
+      document.getElementById('button')
+    );
+  </script>
+</body>
+</html>
