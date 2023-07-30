@@ -37,6 +37,7 @@
           "meta[name=theme-color]"
         ]
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }
