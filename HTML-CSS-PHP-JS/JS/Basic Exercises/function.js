@@ -90,3 +90,63 @@ function trueOrFalse(wasThatTrue) {
 
 trueOrFalse(true);
 trueOrFalse(false);
+
+/* ------------- */
+
+function testEqual(val) {
+  if (val == 12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+console.log(testEqual(10));
+console.log(testEqual(12)); //It understand both 12 and '12'
+console.log(testEqual('12'));
+
+/* ------------- */
+
+function testStrict(val) {
+  if (val === 7 ) { //It will equal STRICTLY to 7 and ONLY 7, "7" doesn't work
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+console.log(testStrict(10));
+console.log(testStrict(7));
+console.log(testStrict("7"));
+
+/* ------------- */
+
+function compareEquality(a, b) {
+  if (a === b) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+console.log(compareEquality(10, "10"));
+console.log(compareEquality("20", 20));
+
+/* ------------- */
+
+function testGreaterThan(val) {
+  if (val >= 101) {
+    return "Over 100";
+  }
+
+  if (val >= 11 && val <= 100) { 
+    return "Over 10";
+  }
+
+  return "10 or Under";
+}
+
+console.log(testGreaterThan(0));
+console.log(testGreaterThan(10));
+console.log(testGreaterThan(11));
+console.log(testGreaterThan(99));
+console.log(testGreaterThan(100));
+console.log(testGreaterThan(101));
+console.log(testGreaterThan(150));
