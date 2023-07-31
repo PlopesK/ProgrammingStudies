@@ -1,4 +1,4 @@
-//Basic tests with functions
+//Basic tests with Functions
 //Calling
 function reusableFunction  () {
     console.log("Hi World");
