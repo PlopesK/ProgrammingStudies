@@ -150,3 +150,30 @@ console.log(testGreaterThan(99));
 console.log(testGreaterThan(100));
 console.log(testGreaterThan(101));
 console.log(testGreaterThan(150));
+
+/* ------------- */
+
+function testSize(num) {
+  if (num >= 20) {
+    return "Huge";
+  } else if (num <= 20 && num >= 15) {
+    return "Large";
+  } else if (num <= 14 && num >= 10) {
+    return "Medium";
+  } else if (num <= 9 && num >= 5) {
+    return "Small";
+  } else if (num <= 4) {
+    return "Tiny";
+  }
+}
+
+console.log(testSize(0));
+console.log(testSize(4));
+console.log(testSize(5));
+console.log(testSize(8));
+console.log(testSize(10));
+console.log(testSize(14));
+console.log(testSize(15));
+console.log(testSize(17));
+console.log(testSize(20));
+console.log(testSize(25));
