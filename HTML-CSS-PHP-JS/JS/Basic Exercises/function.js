@@ -1,7 +1,7 @@
 //Basic tests with Functions
 //Calling
-function reusableFunction  () {
-    console.log("Hi World");
+function reusableFunction() {
+  console.log("Hi World");
 }
 reusableFunction();
 
@@ -9,30 +9,30 @@ reusableFunction();
 //Parameter
 
 function testFun(param1, param2) {
-    console.log(param1, param2); //"Hello World"
+  console.log(param1, param2); //"Hello World"
 }
-testFun("Hello", " World");  
+testFun("Hello", " World");
 
 /* ------------- */
 
 function functionWithArgs(arg1, arg2) {
-    const sum = arg1 + arg2;
-    console.log(sum);
+  const sum = arg1 + arg2;
+  console.log(sum);
 }
-functionWithArgs(1,2);
-functionWithArgs(7,9);
+functionWithArgs(1, 2);
+functionWithArgs(7, 9);
 
 /* ------------- */
 
 function timesFive(num) {
-    return (num) * 5;
-  }
+  return num * 5;
+}
 const FIVE = timesFive(5);
 const TWO = timesFive(2);
 const ZERO = timesFive(0);
 
 /* ---------------------------------------------------- */
-//Var Tests 
+//Var Tests
 
 const myGlobal = 10; //Global value
 
@@ -54,13 +54,13 @@ function fun2() {
 /* ------------- */
 
 function myLocalScope() {
-    const myVar = "Local Message!";
-    console.log('inside myLocalScope', myVar);
-  }
-  myLocalScope();
-  
+  const myVar = "Local Message!";
+  console.log("inside myLocalScope", myVar);
+}
+myLocalScope();
+
 // myVar is not defined outside of myLocalScope
-console.log('outside myLocalScope', myVar); //The color even changes :O
+console.log("outside myLocalScope", myVar); //The color even changes :O
 
 /* ------------- */
 
@@ -77,15 +77,14 @@ function addFive() {
 addThree();
 addFive();
 
-
 /* ---------------------------------------------------- */
 //If-Booleans
 
 function trueOrFalse(wasThatTrue) {
-    if (wasThatTrue) {
-      return "Yes, that was true";
-    }
-    return "No, that was false";
+  if (wasThatTrue) {
+    return "Yes, that was true";
+  }
+  return "No, that was false";
 }
 
 trueOrFalse(true);
@@ -94,7 +93,7 @@ trueOrFalse(false);
 /* ------------- */
 
 function testEqual(val) {
-  if (val == 12) { 
+  if (val == 12) {
     return "Equal";
   }
   return "Not Equal";
@@ -102,12 +101,13 @@ function testEqual(val) {
 
 console.log(testEqual(10));
 console.log(testEqual(12)); //It understand both 12 and '12'
-console.log(testEqual('12'));
+console.log(testEqual("12"));
 
 /* ------------- */
 
 function testStrict(val) {
-  if (val === 7 ) { //It will equal STRICTLY to 7 and ONLY 7, "7" doesn't work
+  if (val === 7) {
+    //It will equal STRICTLY to 7 and ONLY 7, "7" doesn't work
     return "Equal";
   }
   return "Not Equal";
@@ -136,7 +136,7 @@ function testGreaterThan(val) {
     return "Over 100";
   }
 
-  if (val >= 11 && val <= 100) { 
+  if (val >= 11 && val <= 100) {
     return "Over 10";
   }
 
