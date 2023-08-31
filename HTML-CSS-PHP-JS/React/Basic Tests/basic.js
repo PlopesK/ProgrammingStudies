@@ -1,7 +1,6 @@
 const JSX = () => {
   return (
     <div>
-      <h1> Hello JSX!</h1>
       <p> Lorem ipusum i forgor the rest </p>
       <ul>
         {/* LIST HAHA i don know*/}
@@ -41,6 +40,34 @@ class ParentComponent extends React.Component {
         <h1>I am the parent</h1>
         <ChildComponent />
         <JSX />
+      </div>
+    );
+  }
+}
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <Welcome name={"Paulo"} />
+      </div>
+    );
+  }
+}
+
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <p>
+          Hello, <strong>{this.props.name}</strong>!
+        </p>
       </div>
     );
   }

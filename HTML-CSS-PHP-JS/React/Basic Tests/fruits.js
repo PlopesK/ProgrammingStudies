@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const TypesOfFruit = () => {
   return (
     <div>
@@ -33,6 +35,20 @@ const Vegetables = () => {
   );
 };
 
+const ShoppingCart = (props) => {
+  return (
+    <div>
+      <h1>Shopping Cart Component</h1>
+      <p>Quantity: {props.items}</p>
+    </div>
+  );
+};
+
+ShoppingCart.propTypes = {
+  items: PropTypes.number.isRequired,
+};
+ShoppingCart.defaultProps = { items: 0 };
+
 class TypesOfFood extends React.Component {
   constructor(props) {
     super(props);
@@ -43,10 +59,12 @@ class TypesOfFood extends React.Component {
         <h1>Types of Food:</h1>
         <Fruits />
         <Vegetables />
+        <br />
+        <ShoppingCart />
       </div>
     );
   }
 }
 
-const rootElement = document.getElementById("challenge-node");
+const rootElement = document.getElementById("root");
 ReactDOM.render(<TypesOfFood />, rootElement);
