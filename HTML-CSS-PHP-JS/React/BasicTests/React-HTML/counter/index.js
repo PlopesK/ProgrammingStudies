@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
 class Counter extends React.Component {
   state = {
-    value: 0
+    value: 0,
   };
 
   handleIncrement = () => {
     this.setState((state) => ({
-      value: state.value + 1
+      value: state.value + 1,
     }));
+    ("");
   };
 
   handleDecrement = () => {
     this.setState((state) => ({
-      value: state.value - 1
+      value: state.value - 1,
     }));
   };
 
@@ -30,8 +31,8 @@ class Counter extends React.Component {
 }
 
 function FormExample() {
-  const [inputValue, setInputValue] = useState('');
-  const [displayedValue, setDisplayedValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
+  const [displayedValue, setDisplayedValue] = useState("");
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -50,7 +51,7 @@ function FormExample() {
   );
 }
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 ReactDOM.render(
   <div>
     <Counter /> <br></br>
