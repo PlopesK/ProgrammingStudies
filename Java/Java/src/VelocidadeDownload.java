@@ -11,7 +11,6 @@ public class VelocidadeDownload {
         System.out.println("\nDigite a velocidade do plano: ");
         double velocidadePlano = scanner.nextDouble();
 
-        //TODO: Calcule a velocidade de download estimada
         double velocidadeDownloadEstimada = calcularVelocidadeDownload(distanciaServidores, velocidadePlano);
 
         // Apresentar o resultado
@@ -20,7 +19,6 @@ public class VelocidadeDownload {
         scanner.close();
     }
     public static double calcularVelocidadeDownload(double distanciaServidores, double velocidadePlano) {
-        // TODO: Crie a fórmula de cálculo para a velocidade de download estimada
         double velocidadeDownload = velocidadePlano/(1 + (distanciaServidores/100));
         if (velocidadeDownload > velocidadePlano) {
             velocidadeDownload = velocidadePlano;
