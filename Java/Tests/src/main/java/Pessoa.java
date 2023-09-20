@@ -7,9 +7,9 @@ public class Pessoa {
 
     private String nome;
 
-    private LocalDate nascimento;
+    private LocalDateTime nascimento;
 
-    public Pessoa(String nome, LocalDate nascimento) {
+    public Pessoa(String nome, LocalDateTime nascimento) {
         this.nome = nome;
         this.nascimento = nascimento;
     }
