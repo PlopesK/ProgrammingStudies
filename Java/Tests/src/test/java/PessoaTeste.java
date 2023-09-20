@@ -9,15 +9,16 @@ public class PessoaTeste {
     void deveCalcularIdadeCorretamente() {
         Pessoa jessica = new Pessoa("Jéssica", LocalDateTime.of(2000, 1, 1, 15, 0, 0));
         Assertions.assertEquals(23, jessica.getIdade());
+        //Assert that 'Jessica' has 23 years old based on the currently time. (20/09/2023)
     }
 
     @Test
     void deveRetornarSeEhMaiorDeIdade() {
-        Pessoa jessica = new Pessoa("Jéssica", LocalDateTime.of(2000, 1, 1, 15, 0, 0));
-        Assertions.assertTrue(jessica.ehMaiorDeIdade());
+        Pessoa ana = new Pessoa("Ana Paula", LocalDateTime.of(2000, 1, 1, 15, 0, 0));
+        Assertions.assertTrue(ana.ehMaiorDeIdade());
 
-        Pessoa joao = new Pessoa("João", LocalDateTime.now());
-        Assertions.assertFalse(joao.ehMaiorDeIdade());
+        Pessoa fernando = new Pessoa("Fernando", LocalDateTime.now());
+        Assertions.assertFalse(fernando.ehMaiorDeIdade());
     }
 
     @Test
