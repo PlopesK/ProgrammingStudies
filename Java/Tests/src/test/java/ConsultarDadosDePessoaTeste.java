@@ -25,7 +25,7 @@ public class ConsultarDadosDePessoaTeste {
 
     @AfterEach
     void removeDadosTeste() {
-        BancoDeDados.removeDados(new Pessoa("Carlos", LocalDateTime.of(2000, 2, 1, 13, 0, 0)));;
+        BancoDeDados.removeDados(new Pessoa("Carlos", LocalDateTime.of(2000, 2, 1, 13, 0, 0)));
     }
 
     @AfterAll
