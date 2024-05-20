@@ -22,13 +22,13 @@ total = valor * quant #Valor total sem desconto
 
 #Utilização de IF, ELIF e ELSE com base o enunciado para atribuir um desconto ao Valor Total
 if  total < 2500:
-    desconto = 0
+    desconto = 0 #0% de Desconto
 elif total >= 2500 and total < 6000:
-    desconto = 0.04
+    desconto = 0.04 #4% de Desconto
 elif total >= 6000 and total < 10000:
-    desconto = 0.07
+    desconto = 0.07 #7% de Desconto
 elif total >= 10000:
-    desconto = 0.11
+    desconto = 0.11 #11% de Desconto
 else:
     print("Valor inválido!") #Mensagem que irá aparecer caso o valor seja inválido
 

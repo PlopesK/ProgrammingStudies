@@ -46,36 +46,38 @@
 #	Deve-se apresentar na saída de console uma consulta por autor em que 2 livros sejam do mesmo autor [EXIGÊNCIA DE SAÍDA DE CONSOLE 5 de 6];
 #	Deve-se apresentar na saída de console uma remoção de um dos livros seguida de uma consulta de todos os livros [EXIGÊNCIA DE SAÍDA DE CONSOLE 6 de 6];
 
-print("\n-- Bem-vindo a Biblioteca do Gabriel Primo! --\n")
+print("\n-- Bem-vindo a Biblioteca do Gabriel Primo! --")
 
-lista_livro = []
-id_global = 0
+lista_livro = [] #Cria um array (lista) vazia para armazenar os livros
+id_global = 0 #Inicia o programa com um Id global sem valor, pois não há livros cadastrados
 
-def cadastrar(id):
+def cadastrar(id): #Função para cadastrar livro, cuja recebe um valor para o 'id' ao ser chamado
     print("\n-- Cadastrar Livro --")
+    print(f"ID do livro: {id}") #Informa ao usuário qual será o ID do livro
     nome = input("Informe o nome do livro: ")
     autor = input("Informe o nome do autor: ")
     editora = input("Informe a editora: ")
 
-    livro = {
+    livro = { #Cria um objeto livro utilizando as informações digitadas
         "id": id,
         "nome": nome,
         "autor": autor,
         "editora": editora
     }
 
-    lista_livro.append(livro)
+    lista_livro.append(livro) #Adiciona um novo objeto 'livro' a lista de 'lista_livro'
     print("\nLivro cadastrado com sucesso!\n")
 
-def mostrar_livro(id, nome, autor, editora):
+def mostrar_livro(id, nome, autor, editora): #Função para mostrar um livro
+    #Função criada para simplificar o código, informando o 'id', 'nome', 'autor' e 'editora' informados ao ser chamado
     print(f"ID: {id}")
     print(f"Nome: {nome}")
     print(f"Autor: {autor}")
-    print(f"Editora: {editora}")
+    print(f"Editora: {editora}\n")
 
-def consultar():
+def consultar(): #Função para consultar os livros
     print("\n" + "-" * 46)
-    print("-" * 15 + " MENU CONSULTAR " + '-' * 15)
+    print("-" * 15 + " MENU CONSULTAR " + '-' * 15) #Menu de consultar livros
     print("\nEscolha a opção desejada: ")
     print("1 - Consultar todos os livros")
     print("2 - Consultar livro por id")
@@ -83,54 +85,66 @@ def consultar():
     print("4 - Sair")
 
     opcao = int(input(">> "))
-    print("-" * 46)
+    print("-" * 46 + '\n')
 
     if opcao == 1:
-        if len(lista_livro) > 0:
-            for livro in lista_livro:
-                mostrar_livro(livro['id'], livro['nome'], livro['autor'], livro['editora'])
+        if len(lista_livro) > 0: #Verifica se há pelo menos 1 livro
+            for livro in lista_livro: #Verifica todos os objetos 'livro' na array 'lista_livro'
+                print("------")
+                mostrar_livro(livro['id'], livro['nome'], livro['autor'], livro['editora']) #Chama a função 'mostrar_livro()' com as informações encontradas do livro
         else:
             print("\nNão há livros cadastrados.\n")
-            return
+            return #Informa que não tem livros cadastrados e retorna ao menu
         
     elif opcao == 2:
-        id = int(input("\nInforme o id do livro: "))
-        for livro in lista_livro:
-            if livro['id'] == id:
-                mostrar_livro(livro['id'], livro['nome'], livro['autor'], livro['editora'])
-            else:
-                print("\nLivro não encontrado!\n")
+        id = int(input("Informe o ID do livro: "))
+        livro_id = False # Variável de controle
+        for livro in lista_livro: #Verifica todos os objetos 'livro' na array 'lista_livro'
+            if livro['id'] == id: #Caso encontre o Id informado, irá realizar o código abaixo
+                print('') #Espaço para decoração da saída
+                mostrar_livro(livro['id'], livro['nome'], livro['autor'], livro['editora']) #Chama a função 'mostrar_livro()' com as informações encontradas do livro
+                livro_id = True #Define a variavél como 'verdadeira' caso encontre o livro, evitando com que a mensagem de erro apareça indevidamente
+        if not livro_id: #Caso não encontre o livro, imprimirá uma mensagem de erro
+            print("\nLivro não encontrado!")
+            consultar() #Reinicia a função
 
     elif opcao == 3:
-        autor = input("\nInforme o nome do autor: ")
-        for livro in lista_livro:
-            if livro['autor'] == autor:
+        autor = input("Informe o nome do autor: ")
+        autor_encontrado = False  # Variável de controle
+        for livro in lista_livro: #Verifica todos os objetos 'livro' na array 'lista_livro'
+            if livro['autor'] == autor: #Caso haja um autor que possua com nome igual ao inserido
+                print('') #Espaço para decoração da saída
                 mostrar_livro(livro['id'], livro['nome'], livro['autor'], livro['editora'])
-            else:
-                print("\nAutor não encontrado!\n")
+                autor_encontrado = True #Define a variavél como 'verdadeira' caso encontre o autor
+        if not autor_encontrado: #Caso não encontre o autor, imprimirá uma mensagem de erro
+            print("\nAutor não encontrado!")
+            consultar() #Reinicia a função
 
     elif opcao == 4:
         print("\n-- Voltando ao menu principal --\n")
-        return
+        return #Retorna ao menu
     else:
         print("\nOcorreu um erro! Tente novamente!\n")
-        consultar()
+        consultar() #Reinicia a função
 
-def remover():
-    id = int(input("\nDigite o ID do livro que será removido: "))
-    for livro in lista_livro:
-        if livro['id'] == id:
-            lista_livro.remove(livro)
+def remover(): #Função para remover um livro
+    print("-" * 46 + '\n')
+    id = int(input("Digite o ID do livro que será removido: "))
+    livro_removido = False  # Variável de controle
+    for livro in lista_livro: #Verifica todos os objetos 'livro' na array 'lista_livro'
+        if livro['id'] == id: #Caso haja um livro que possua um id igual ao inserido
+            print('') #Espaço para decoração da saída
+            lista_livro.remove(livro) #O livro selecionado será removido da lista
             print("\nLivro removido com sucesso!\n")
-            return
-        else:
-            print("\nLivro não encontrado!\n")
-            return
+            livro_removido = True #Define a variavél como 'verdadeira' caso encontre o livro
+    if not livro_removido: #Caso não encontre o livro, imprimirá uma mensagem de erro
+        print("\nLivro não encontrado!\n")
+        return #Retorna ao menu
 
 
 while True:
-    print("\n" + "-" * 46)
-    print("-" * 15 + " MENU PRINCIPAL " + '-' * 15)
+    print("-" * 46)
+    print("-" * 15 + " MENU PRINCIPAL " + '-' * 15) #Menu Principal
     print("\nEscolha a opção desejada: ")
     print("1 - Cadastrar livro")
     print("2 - Consultar livros")
@@ -140,15 +154,15 @@ while True:
     acao = int(input(">> "))
 
     if acao == 1:
-        id_global += 1
-        cadastrar(id_global)
+        id_global += 1 #Adiciona 1 novo id a variável 'id_global'
+        cadastrar(id_global) #Chama a função 'cadastrar()' informando qual o id atual
     elif acao == 2:
-        consultar()
+        consultar() #Chama a função 'consultar()'
     elif acao == 3:
-        remover()
+        remover() #Chama a função 'remover()'
     elif acao == 4:
         print("\n-- Encerrando o programa... --\n")
-        break
+        break #Encerra o programa
     else:
         print("\nOcorreu um erro! Tente novamente!\n")
-        continue
+        continue #Reinicia o programa caso seja inserido uma opção não informada

@@ -1,3 +1,5 @@
+#--------- ESSA VERÃO EXISTE PARA SEGUIR O PADRÃO DO PROFESSOR ---------
+
 #Enunciado: Você e sua equipe de programadores foram contratados para desenvolver um app de vendas para uma loja que vende Açaí e Cupuaçu. Você ficou com a parte de desenvolver a interface do cliente para retirada do produto.
 #A Loja possui seguinte relação:
 
@@ -19,7 +21,7 @@
 #	Deve-se apresentar na saída de console um pedido em que o usuário errou o tamanho [EXIGÊNCIA DE SAÍDA DE CONSOLE 3 de 4];
 #	Deve-se apresentar na saída de console um pedido com duas opções sabores diferentes e com tamanhos diferentes [EXIGÊNCIA DE SAÍDA DE CONSOLE 4 de 4]; 
 
-print("\n-- Bem-vindo a Loja de Gelados do Gabriel Primo! --\n")
+print("\n-- Bem-vindo a Loja de Gelados do Gabriel Primo! --")
 print("-------------------- Cardápio --------------------") #Cardápio informando as opções do menu
 print("--------------------------------------------------")
 print("---|  Tamanho  |  Cupuaçu (CP)  |  Açaí (AC)  |---")
@@ -34,14 +36,12 @@ quant = 0 #Quantidade de vezes que foram feitas pedidos
 pedidos = [] #Array para armazenar os pedidos realizados e formar uma lista
 
 while True:
-    print("\n---------- Escolher Sabor ----------")
-    sabor = input("Digite o sabor (AC para Açaí, CP para Cupuaçu): ").upper() #Input para informar o sabor
+    sabor = input("\nDigite o sabor (AC para Açaí, CP para Cupuaçu): ").upper() #Input para informar o sabor
     if sabor not in ['CP', 'AC']: #Caso não seja uma das opções pré-definidas, o código exibirá um erro e reiniciará
         print( "Sabor inválido. Tente novamente!")
         continue
 
-    print("\n---------- Escolher Tamanho ----------")
-    tamanho = input("Digite o tamanho desejado (P,M ou G): ").upper() #Input para informar o tamanho
+    tamanho = input("\nDigite o tamanho desejado (P,M ou G): ").upper() #Input para informar o tamanho
     if tamanho not in ['P', 'M', 'G']: #Caso não seja uma das opções pré-definidas, o código exibirá um erro e reiniciará
         print( "Tamanho inválido. Recomeçando o programa!")
         continue
@@ -85,7 +85,7 @@ while True:
         print("Resposta inválida. Encerrando o pedido.") #Caso a resposta seja inválida, o loop se encerra
         break
 
-print("\n----------- Detalhes dos Pedidos -----------")
+print("----------- Detalhes dos Pedidos -----------")
 for pedido in pedidos: #Passa por cada pedido dentro da array de "pedidos"
     sabor, tamanho, valor = pedido #Passa os valores de "pedido" para "sabor", "tamanho" e "valor"
     print(f"Sabor: {sabor}, Tamanho: {tamanho}, Valor: R${valor:.2f}") #Exibe os pedidos em uma lista
@@ -93,8 +93,8 @@ for pedido in pedidos: #Passa por cada pedido dentro da array de "pedidos"
 print("-------------------------------------------- \n")
 
 if quant > 1:
-    print(f"O total dos seus pedidos é: R${total:.2f} \n") #Caso tenha sido feito só 1 pedido, a mensagem será singular
+    print(f"O total dos seus pedidos é: R${total:.2f}") #Caso tenha sido feito só 1 pedido, a mensagem será singular
 else:
-    print(f"O total do seu pedido é: R${total:.2f} \n") #Caso tenha sido feito mais de 1 pedido, a mensagem será plural
+    print(f"O total do seu pedido é: R${total:.2f}") #Caso tenha sido feito mais de 1 pedido, a mensagem será plural
 
 print("Obrigado pela compra! Volte sempre\n")

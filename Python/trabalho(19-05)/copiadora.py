@@ -54,59 +54,63 @@ precos = { #Definindo preços dependendo das especificações do produto
         'FOT': 0.20
     }
 
-def escolha_servico():
+def escolha_servico(): #Função de escolha de serviços
     while True:
-        print("\nDigite o serviço desejado: \nDIG - Digitação\nICO - Impressão Colorida\nIPB - Impressão Preto e Branco\nFOT - Fotocópia\n")
-        servico = input(">> ")
-        if servico not in ['DIG', 'ICO', 'IPB', 'FOT']:
+        print("\nDigite o serviço desejado: \nDIG - Digitação\nICO - Impressão Colorida\nIPB - Impressão Preto e Branco\nFOT - Fotocópia")
+        servico = input(">> ").upper() #Input para receber o nome do serviço. O upper deixa em Maiúsculo todos os caracteres da resposta
+        if servico not in ['DIG', 'ICO', 'IPB', 'FOT']: #Caso não seja um desses serviços, imprimirá um erro na saída
             print("Opção inválida! Digite novamente!")
-            continue
+            continue #Repete o 'While'
         else:
-            if servico in precos:
-                return precos[servico]
+            if servico in precos: #Caso o serviço escrito esteja dentro do array de 'precos'
+                return precos[servico] #Retornará o preço do serviço selecionado
 
-def num_pagina():
+def num_pagina(): #Função de escolha de número de páginas
     while True:
         try:
-            paginas = int(input("\nDigite o número de páginas\n>> "))
-            if paginas >= 20000:
+            paginas = int(input("\nDigite o número de páginas\n>> ")) #Input do número de páginas
+            if paginas >= 20000: #Verifica se a quantidade de páginas está dentro do limite. Caso não esteja, reinicia o 'while'
                 print("Não aceitamos pedidos com 20000 ou mais páginas.")
                 continue
-            elif paginas >= 2000:
+            #Verificação do desconto que será atribuído dependendo da quantia de páginas
+            elif paginas >= 2000 and paginas < 20000:
                 return paginas * 0.75 #25% de desconto / 75% do valor original
-            elif paginas >= 200:
+            elif paginas >= 200 and paginas < 2000:
                 return paginas * 0.80 #20% de desconto / 80% do valor original
-            elif paginas >= 20:
+            elif paginas >= 20 and paginas < 200:
                 return paginas * 0.85 #15% de desconto / 85% do valor original
             else:
-                return paginas
+                return paginas #Retorna sem desconto
         except ValueError:
-            print("Por favor, insira um número válido de páginas.")
+            print("Por favor, insira um número válido de páginas.") #Imprimirá esse erro caso ocorra algo de errado
 
-def servico_extra():
+def servico_extra(): #Função de escolha de serviço extra
     while True:
         try:
             print("\nDeseja adicionar algum serviço extra? \n1 - Simples (R$15.00) \n2 - Capa Dura (R$40.00) \n0 - Nenhum Serviço (Sem custos adicionais)")
-            servico_extra = int(input(">> "))
-        except ValueError:
-            print("Opção inválida! Digite novamente!")
-            continue
-        else:
+            servico_extra = int(input(">> ")) #Input de escolha do serviço extra
+
+            #Verificação de qual opção foi selecionada pelo usuário
             if servico_extra == 1:
-                return 15.00
+                return 15.00 #Retorna 15 reais
             elif servico_extra == 2:
-                return 40.00
+                return 40.00 #Retorna 40 reais
             elif servico_extra == 0:
-                return 0.00
+                return 0.00 #Retorna 0 reais
             else:
                 print("Opção de serviço adicional inválida, por favor escolha entre: 1, 2 ou 0!")
-                continue
+                continue #Caso não seja nenhuma das opções informadas, reinicia o 'while' e imprime um erro 
+        except ValueError:
+            print("Opção inválida! Digite novamente!") #Imprimirá esse erro caso ocorra algo de errado
+            continue
 
-print("\n-- Bem-vindo a Copiadora do Gabriel Primo! --\n")
+print("\n-- Bem-vindo a Copiadora do Gabriel Primo! --")
 
-valor_servico = escolha_servico() #Recebe o valor do serviço
-numero_paginas = num_pagina() #Recebe o valor do número de páginas
-valor_extra = servico_extra() #Recebendo o valor do serviço extra
+valor_servico = escolha_servico() #Recebe o valor do serviço do 'return' em "escolha_servico()"
+numero_paginas = num_pagina() #Recebe o valor do número de páginas do 'return' em "num_pagina()"
+valor_extra = servico_extra() #Recebendo o valor do serviço extra do 'return' em "servico_extra()"
 total = (valor_servico * numero_paginas) + valor_extra # Cálculo total
 
-print(f"\nO Valor final a se pagar é: R${total:.2f}\n") # Saída final
+print(f"\n-- O Valor final a se pagar é: R${total:.2f} --") # Saída final
+print(f"-- (Serviço: {valor_servico:.2f} * Páginas: {numero_paginas:.0f}) + Extra: {valor_extra:.2f} --")
+print("-- Obrigado pela compra! Volte sempre! --\n")
