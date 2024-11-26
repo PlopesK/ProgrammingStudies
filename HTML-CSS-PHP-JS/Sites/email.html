@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de Email</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+	<!-- https://www.emailjs.com/ -->
+    <script>
+        (function(){
+            emailjs.init("user-ID"); // Seu User ID
+        })();
+        
+        function sendEmail(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const templateParams = {
+                from_email: email,
+                subject: subject,
+                message: message
+            };
+
+            emailjs.send('service-ID', 'template-ID', templateParams)
+                .then(function(response) {
+                    alert('Email enviado com sucesso!');
+                }, function(error) {
+                    alert('Falha ao enviar o email: ' + JSON.stringify(error));
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1>Enviar Email</h1>
+    <form id="contactForm" onsubmit="sendEmail(event)">
+        <label for="email">Seu Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="subject">Assunto:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="message">Descrição:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
