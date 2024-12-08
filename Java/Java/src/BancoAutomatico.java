@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Banco {
+public class BancoAutomatico {
         public static void main(String[] args) {
             abstract class Moeda {
                 protected double valor;
@@ -23,7 +23,7 @@ public class Banco {
 
                 @Override
                 public String getNome() {
-                    return "Dólar";
+                    return "Dolar";
                 }
             }
 
@@ -74,7 +74,7 @@ public class Banco {
                             return;
                         }
                     }
-                    System.out.println("Moeda " + nomeMoeda + " não encontrada no cofrinho.");
+                    System.out.println("Moeda " + nomeMoeda + " nao encontrada no cofrinho.");
                 }
 
                 public void listagemMoedas() {
@@ -111,10 +111,10 @@ public class Banco {
 
                 cofrinho.listagemMoedas();
 
-                cofrinho.remover("Dólar");
+                cofrinho.remover("Dolar");
 
                 cofrinho.listagemMoedas();
-                cofrinho.remover("Dólar");
+                cofrinho.remover("Dolar");
 
                 System.out.println("\nTotal no cofrinho (convertido para Real): R$" + String.format("%.2f", cofrinho.totalConvertido(taxaDeCambioEuroParaReal, taxaDeCambioDolarParaReal)));
 
