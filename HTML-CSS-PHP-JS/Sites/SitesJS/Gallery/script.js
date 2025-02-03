@@ -1,9 +1,12 @@
-let images = [
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150/ff0000",
-    "https://via.placeholder.com/150/00ff00",
-    "https://via.placeholder.com/150/0000ff"
-];
+const imagens = document.querySelectorAll('.gallery img');
+
+// Cria um array para armazenar os src das imagens
+const images = [];
+
+// Itera sobre cada imagem e adiciona o src ao array
+imagens.forEach(imagem => {
+    images.push(imagem.src);
+});
 
 let currentIndex = 0;
 
