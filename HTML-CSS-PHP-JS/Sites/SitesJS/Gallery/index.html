@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+        onclick="openFullscreen(0)">
+        <img src="https://images.pexels.com/photos/8634319/pexels-photo-8634319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+        onclick="openFullscreen(1)">
+        <img src="https://images.pexels.com/photos/11124749/pexels-photo-11124749.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+        onclick="openFullscreen(2)">
+        <img src="https://images.pexels.com/photos/9919605/pexels-photo-9919605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+        onclick="openFullscreen(3)">
+    </div>
+    
+    <div id="fullscreen-view" class="fullscreen" onclick="closeFullscreen(event)">
+        <button class="close" onclick="closeFullscreen(event)">&times;</button>
+        <button class="arrow left" onclick="prevImage(event)">&#9664;</button>
+        <img id="fullscreen-img">
+        <button class="arrow right" onclick="nextImage(event)">&#9654;</button>
+        
+        <div id="thumbnail-container">
+            <button id="toggle-thumbnails" onclick="toggleThumbnails()">▲</button>
+            <div id="thumbnails"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

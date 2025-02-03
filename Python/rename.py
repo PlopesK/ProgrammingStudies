@@ -1,10 +1,10 @@
 import os
 
 # Programa para renomear arquivos com palavra iguais
-caminho_pasta = r"caminho\para\pasta"
+caminho_pasta = r"C:\Users\Usuario\sonicr\sprites\ClassicSonic"
 
-antigo_nome = "antigo"
-novo_nome = "novo"
+antigo_nome = "sonic3"
+novo_nome = "classicsonic"
 
 for nome_arquivo in os.listdir(caminho_pasta):
     if antigo_nome in nome_arquivo:  # Verifica se o nome antigo está presente
