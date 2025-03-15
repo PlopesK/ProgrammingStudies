@@ -1,9 +1,7 @@
 const imagens = document.querySelectorAll('.gallery img');
 
-// Cria um array para armazenar os src das imagens
 const images = [];
 
-// Itera sobre cada imagem e adiciona o src ao array
 imagens.forEach(imagem => {
     images.push(imagem.src);
 });

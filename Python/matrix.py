@@ -1,4 +1,4 @@
-from sympy import Matrix, symbols, Eq, solve
+from sympy import Matrix, symbols, Eq, solve, sin, cos, exp, lambdify
 import numpy as np
 
 print("\n-------------- COMEÇO --------------")
@@ -58,5 +58,52 @@ k_A = k * Ak
 
 print("\nMatriz k.A:")
 print(k_A)
+
+#Definindo o sistema de equações
+def sistema_equacoes(x):
+    x1, x2 = x
+    return np.array([3*x1**2 + 5*x2 - 13, 2*x1 + x2**3 - 6])
+
+def jacobiana(x):
+    x1, x2 = x
+    return np.array([[6*x1, 5], [2, 3*x2**2]])
+
+def newton_raphson(x0, tol=1e-2, max_iter=100):
+    x = x0.astype(np.float64)  # Converte o tipo de dado para float64
+    for _ in range(max_iter):
+        f = sistema_equacoes(x)
+        j = jacobiana(x)
+        delta_x = np.linalg.solve(j, -f)
+        x += delta_x
+        if np.linalg.norm(delta_x) < tol:
+            break
+    return x
+
+x0 = np.array([0, 0])
+solucao = newton_raphson(x0)
+print("Solução: x1 = {:.6f}, x2 = {:.6f}".format(solucao[0], solucao[1]))
+
+def calcular_erro(x):
+    f = np.array([3*x[0]**2 + 5*x[1] - 13, 2*x[0] + x[1]**3 - 6])
+    erro = np.linalg.norm(f)
+    return erro
+
+def main():
+    alternativas = [
+        np.array([1.465335, 1.494794]),
+        np.array([1.380991, 1.488622]),
+        np.array([1.363355, 1.484794]),
+        np.array([1.705273, 1.861018])
+    ]
+
+    erros = [calcular_erro(alternativa) for alternativa in alternativas]
+
+    indice_minimo = np.argmin(erros)
+    alternativa_minima = alternativas[indice_minimo]
+
+    print("Alternativa mais próxima do zero:", alternativa_minima)
+
+if __name__ == "__main__":
+    main()
 
 print("\n-------------- FIM --------------\n")
