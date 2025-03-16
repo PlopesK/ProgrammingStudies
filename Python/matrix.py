@@ -83,27 +83,4 @@ x0 = np.array([0, 0])
 solucao = newton_raphson(x0)
 print("Solução: x1 = {:.6f}, x2 = {:.6f}".format(solucao[0], solucao[1]))
 
-def calcular_erro(x):
-    f = np.array([3*x[0]**2 + 5*x[1] - 13, 2*x[0] + x[1]**3 - 6])
-    erro = np.linalg.norm(f)
-    return erro
-
-def main():
-    alternativas = [
-        np.array([1.465335, 1.494794]),
-        np.array([1.380991, 1.488622]),
-        np.array([1.363355, 1.484794]),
-        np.array([1.705273, 1.861018])
-    ]
-
-    erros = [calcular_erro(alternativa) for alternativa in alternativas]
-
-    indice_minimo = np.argmin(erros)
-    alternativa_minima = alternativas[indice_minimo]
-
-    print("Alternativa mais próxima do zero:", alternativa_minima)
-
-if __name__ == "__main__":
-    main()
-
 print("\n-------------- FIM --------------\n")
