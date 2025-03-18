@@ -1,5 +1,7 @@
-from sympy import Matrix, symbols, Eq, solve, sin, cos, exp, lambdify
+from sympy import Matrix, symbols, Eq, solve
 import numpy as np
+import math
+
 
 print("\n-------------- COMEÇO --------------")
 A = Matrix([[-7, 8], [11, 9]])
@@ -82,5 +84,25 @@ def newton_raphson(x0, tol=1e-2, max_iter=100):
 x0 = np.array([0, 0])
 solucao = newton_raphson(x0)
 print("Solução: x1 = {:.6f}, x2 = {:.6f}".format(solucao[0], solucao[1]))
+
+def f(x):
+    return x * math.log(x) - 1
+
+def bisseccao(a, b, iteracoes):
+    for _ in range(iteracoes):
+        xm = (a + b) / 2  # Calcula o ponto médio
+        if f(xm) == 0:  # Se f(xm) for exatamente zero, encontramos a raiz
+            return xm
+        elif f(xm) * f(a) < 0:  # Se houver mudança de sinal no intervalo [a, xm]
+            b = xm
+        else:  # Caso contrário, a raiz está no intervalo [xm, b]
+            a = xm
+    return xm  # Retorna a aproximação da raiz após as iterações
+
+a, b = 1, 2
+iteracoes = 6
+
+raiz_aproximada = bisseccao(a, b, iteracoes)
+print(raiz_aproximada)
 
 print("\n-------------- FIM --------------\n")
